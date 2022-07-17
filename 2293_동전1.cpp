@@ -20,9 +20,9 @@ int main(){
 	dp[0] = 1;
 
 	for(int i=0; i<N; i++){
-        for(int j=val[i]; j<=K; j++){
-                dp[j] += dp[j-val[i]];
-        }
+		for(int j=val[i]; j<=K; j++){
+			dp[j] += dp[j-val[i]];
+		}
 	}
 
 	cout <<dp[K]<<endl;
