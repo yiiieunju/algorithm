@@ -12,7 +12,7 @@ int dirY[] = {0, 1,0,-1};
 bool check_turn=false;
 
 bool check_union(int a, int b){
-    //ÇöÀç Ä­°ú ´ÙÀ½ Ä­ ºñ±³
+    //ï¿½ï¿½ï¿½ï¿½ Ä­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Ä­ ï¿½ï¿½
     int diff = a-b<0 ? b-a : a-b;
     if(diff >=L && diff <= R) return true;
     return false;
@@ -53,7 +53,7 @@ void bfs(int i, int j){
                 }
         }
 
-        //Å¥°¡ 0ÀÌ µÉ ¶§ ÀÎ±¸ Á¶Á¤
+        //Å¥ï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½
         if(q.empty()){
             int sum=0;
             for(int i=0; i<people.size(); i++){
@@ -65,7 +65,7 @@ void bfs(int i, int j){
 
             int avg = sum / people.size();
 
-            //ÀÎ±¸ Á¶Á¤
+            //ï¿½Î±ï¿½ ï¿½ï¿½ï¿½ï¿½
             for(int i=0; i<people.size(); i++){
                 int x=people[i].first;
                 int y=people[i].second;
@@ -100,8 +100,8 @@ void solve(){
 
         check_turn = false;
 
-        // ÀÎ±¸ÀÌµ¿ÀÌ ÀÏ¾î³ªÁö ¾Ê¾ÒÀ¸¸é¼­
-        // »óÇÏÁÂ¿ì ºñ±³ÇØ¼­ ÀÎ±¸ÀÌµ¿ÀÌ ÀÏ¾î³ª´Â °÷ÀÎÁö Ã¼Å©
+        // ï¿½Î±ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½Ï¾î³ªï¿½ï¿½ ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½é¼­
+        // ï¿½ï¿½ï¿½ï¿½ï¿½Â¿ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½Î±ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½Ï¾î³ªï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Ã¼Å©
         for(int i=0; i<N; i++){
             for(int j=0; i<N; j++){
                 if(visited[i][j] == false && condition1(i,j)){
