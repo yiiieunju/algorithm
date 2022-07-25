@@ -81,6 +81,7 @@ void bfs(int i, int j){
 }
 
 bool condition1(int x, int y){
+    int d;
     for(int i=0; i<4; i++){
         int nx=x+dirX[d];
         int ny= y+dirY[d];
