@@ -28,7 +28,6 @@ void dfs(int idx, int cnt){
             continue;
         
         select[i] = true;
-
         dfs(i, cnt+1);
         select[i] = false; 
         // 앞전에 이미 쓴 수이지만
