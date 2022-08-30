@@ -13,6 +13,16 @@ map<char,Point> m;
 int M, N;
 vector<string> Board;
 
+void turn(){
+
+    while(1){
+        for(auto& element : m){
+            char start = element.
+        }
+    }
+
+}
+
 string solution(int m, int n, vector<string> board) {
     string answer = "";
     M=m;

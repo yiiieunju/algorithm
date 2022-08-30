@@ -1,6 +1,1 @@
-t m=3;
-    int n=3;
-    
-    vector<string> board = {"DBA",
-                            "C*A",
-          
+    dfs(triangle,h+1, pos+1, sum+right);

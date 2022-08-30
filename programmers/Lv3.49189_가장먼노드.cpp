@@ -11,17 +11,16 @@ int solution(int n, vector<vector<int>> edge) {
 
     //선처리
     for(auto e : edge){
-        vertex[e[0]].push_back(e[1]);
-        vertex[e[1]].push_back(e[0]);
+        vertex[e[0]].push_back(e[1]); // vertex[1] = {6, 2};
+        vertex[e[1]].push_back(e[0]); // vertex[6] = {3};
     }
 
     //bfs
-
     queue<int> q;
     q.push(1);
+
     visited[1] = true;
-    dist[0]=0;
-    dist[1]=0;
+    dist[0]=0; dist[1]=0;
 
     while(!q.empty()){
         int x = q.front();
@@ -29,8 +28,9 @@ int solution(int n, vector<vector<int>> edge) {
 
         for(int i=0; i<vertex[x].size(); i++){
             int nx=vertex[x][i];
-            
             if(visited[nx]) continue;
+
+            
             visited[nx]=true;
             dist[nx] = min(dist[nx],dist[x] + 1);
             q.push(nx);
@@ -38,10 +38,9 @@ int solution(int n, vector<vector<int>> edge) {
     }
     
     int maxdist = *max_element(dist.begin(), dist.begin()+n);
-
-    for(auto d : dist){
+    for(auto d : dist)
         if(d==maxdist) answer+=1;
-    }
+
     return answer;
 }
 

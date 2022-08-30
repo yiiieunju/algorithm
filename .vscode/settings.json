@@ -42,6 +42,12 @@
     "valarray": "cpp",
     "deque": "cpp",
     "forward_list": "cpp",
-    "list": "cpp"
+    "list": "cpp",
+    "*.tcc": "cpp",
+    "mutex": "cpp",
+    "shared_mutex": "cpp",
+    "sstream": "cpp",
+    "unordered_map": "cpp",
+    "unordered_set": "cpp"
   }
 }
