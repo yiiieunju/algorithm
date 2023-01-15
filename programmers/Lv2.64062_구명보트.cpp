@@ -2,9 +2,15 @@
 
 using namespace std;
 
+bool selected;
 
 int solution(vector<int> people, int limit) {
     int answer = 0;
+
+    //4명중에 2명 뽑기
+    while()
+    
+
     return answer;
 }
 
